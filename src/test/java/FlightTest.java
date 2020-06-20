@@ -1,16 +1,23 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
+import static org.junit.Assert.assertEquals;
+
+
 public class FlightTest {
-    private ArrayList<PassengerList> bookedPassengers;
+    private Flight flight;
+    private ArrayList<Passenger> passengers;
 
     @Before
     public void before(){
-        bookedPassengers = new PassengerList();
+        flight = new Flight();
+        passengers = new ArrayList<Passenger>();
     }
 
     @Test
     public void flightHasPassengerList__noBookedPassengers(){
-        assertEquals(0, bookedPassengers.count());
+        assertEquals(0, flight.passengerCount());
     }
 }
